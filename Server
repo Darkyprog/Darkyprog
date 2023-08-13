@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trashpixl</title>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/BQFDyLJN/Logo-Sans-Back.png">
+
+</head>
+
+<body style="background-color: rgb(0, 0, 0);">
+  <style>
+    .tab button {
+      background-color: inherit;
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.5s;
+    }
+
+    .tab button:hover {
+      background-color: rgb(0, 0, 0);
+    }
+
+    .tab button.active {
+      background-color: rgba(220, 77, 5, 0.85);
+    }
+  </style>
+  <img src="https://i.postimg.cc/cLM3xpgn/logo.png" alt="Logo"
+    style="width:60px;height:60px;vertical-align: sub;border-radius: 15%;">
+  <h
+    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: white;font-size:60px;vertical-align: super;">
+    Trashpixl</h>
+  <div class="tab"
+    style="overflow: hidden;border: 0px solid #000000;background-color: rgb(0, 0, 0);position: fixed ;top: 20px;left: 350px;">
+    <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: large;">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Discord')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Discord</button>
+    <button class="tablinks" onclick="openTab(event, 'Donate')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Donate</button>
+    <button class="tablinks" onclick="openTab(event, 'Contrib')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Contribute</button>
+      <button class="tablinks" onclick="openTab(event, 'Contact')"
+      style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">Contact</button>
+  </div>
+  <div id="Home" class="tabcontent" style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/zfzgVxKP/Website-Background.jpg" alt="backgroundHome"
+        style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 500px; border-radius: 100px;">
+      <div class="centered" style="transform: translate(-50%, -50%);position: fixed ;top: 275px;left: 240px;font-size: 40px;display:inline-block;vertical-align:middle;">Start your journey
+        on<br>Trashpixl!</div>
+      <div class="centered_small" style="transform: translate(-50%, -50%);text-align: center;position: fixed ;top: 350px;left: 240px;font-size: 20px;display:inline-block;vertical-align:middle;">Trashpixl is the first
+        open source anarchy and<br>minigame Minecraft server.</div>
+      <button onclick="copyServIp()" type="button"
+        style="transform: translate(-50%, -50%);display:inline-block;vertical-align:middle;padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;top: 425px;left: 240px;font-size: 20px;">Connect
+        Now</button>
+    </div>
+  </div>
+  <div id="Discord" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/J4fpn9td/shader.png" alt="backgroundDiscord"
+        style="width:60%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 100px;">
+      <div class="centered2" style="position: fixed;transform: translate(-50%, -50%);top: 300px;left:240px;font-size: 40px;">Here is our magnificent<br>
+        Discord server</div>
+      <div class="centered2_small" style="position: fixed ;transform: translate(-50%, -50%);top: 365px;left: 240px;font-size: 20px;">Click the button to
+        join our community</div>
+      <a href="https://discord.gg/pUnJnArk4f"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;transform: translate(-50%, -50%);top: 425px;left: 240px;font-size: 20px;">Join
+        Now</a>
+    </div>
+  </div>
+  <div id="Donate" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <img src="https://i.postimg.cc/LXrKLz40/bmc-logo.png" alt="backgroundDonate"
+        style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 700px; border-radius: 100px;">
+      <div class="centered2" style="position: fixed;transform: translate(-50%, -50%);top: 300px;left: 280px;font-size: 40px;">Get cool stuff by donating!</div>
+      <div class="centered2_small" style="position: fixed ;transform: translate(-50%, -50%);top: 350px;left: 280px;font-size: 20px;">Click the button to go to our donation page!</div>
+      <a href="https://www.buymeacoffee.com/trashpixl"
+        style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;transform: translate(-50%, -50%);top: 425px;left: 280px;font-size: 20px;">Donate
+        Now!</a>
+    </div>
+  </div>
+  <div id="Contrib" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: fixed;text-align: center;color: rgb(255, 255, 255);">
+      <!--<img src="https://i.postimg.cc/bY5PBWfD/IMG-5878.png"
+        style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 200px;">-->
+      <div class="centered2" style="position: fixed;transform: translate(-50%, -50%);top: 250px;left: 500px;font-size: 40px;">
+        <br>Since Trashpixl is a fully<br>open source server,<br>you can also contribute<br>to the development of the server!
+      </div>
+      <a href="https://github.com/Trashpixl"style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;transform: translate(-50%, -50%);top: 500px;left: 200px;font-size: 20px;">Github Organization</a>
+      <a href="https://forms.gle/h5thgb7KHG7dhrhq5" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;transform: translate(-50%, -50%);top: 500px;left: 500px;font-size: 20px;">Moderator Application</a>
+      <a href="https://forms.gle/cA3XAgDhkDqjhjYa9" style="padding: 0 30px;line-height: 3;color: #fff;text-align: center;border: 0;background-color: rgb(220, 75, 5, 0.85);border-radius: 10px;position: fixed ;transform: translate(-50%, -50%);top: 500px;left: 800px;font-size: 20px;">Builder Application</a>
+    </div>
+  </div>
+  <div id="Contact" class="tabcontent"
+    style="display: none;padding: 6px 12px;border: 0px solid #000000;border-top: none;">
+    <div class="container"
+      style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;position: relative;text-align: center;color: rgb(255, 255, 255);">
+      <!--<img src="https://i.postimg.cc/bY5PBWfD/IMG-5878.png"
+        style="width:40%;filter: blur(0px);-webkit-filter: blur(0px);position: fixed ;top: 175px;left: 550px; border-radius: 200px;">-->
+      <div class="centered2" style="position: fixed;top: 185px;left: 100px;font-size: 40px; text-align: center;">
+        Here is our contact information:
+      </div>
+      <div class="centered2_small" style="position: fixed ;top: 250px;left: 100px;font-size: 20px;text-align: center;">
+        Email : trashpixl@gmail.com</div>
+      <div class="centered2_small" style="position: fixed ;top: 300px;left: 100px;font-size: 20px;text-align: center;">
+        Website... Trashpixl.github.io</div>
+      <div class="centered2_small" style="position: fixed ;top: 350px;left: 100px;font-size: 20px;text-align: center;">
+        Others : ----Change Here----</div>
+        
+      <!----For Each Contact Info you add add 50 to the top pos so it doesn't overlapp-->
+    </div>
+  </div>
+  <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // redirects if mobile
+    location.replace("http://trashpixl.github.io/mobile/");
+   } 
+   
+    function copyServIp() {
+      navigator.clipboard.writeText("--PutActualIpHere--");
+      alert("Ip Copied!");
+    }
+    document.getElementById("defaultOpen").click();
+    function openTab(evt, TabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(TabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+
+</html>
